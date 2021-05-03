@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Election Map</title>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<style type="text/css">
+
+			/* On mouse hover, lighten state color */
+			path:hover {
+				fill-opacity: .7;
+			}	
+
+			p {
+				font-family: Helvetica, sans-serif;
+				font-size: 15px;
+				color: #56595d;
+				text-align: center;
+			}
+
+			h2 {
+				font-family: Black Arial, sans-serif;
+				font-size: 20px;
+				color: white;
+				text-align: center;
+			}
+			#map_myBarChart {
+				svg{
+					align-content: center;
+				}
+			}
+
+			#map_myChart {
+				svg{
+					align-content: center;
+				}
+			}
+
+			#map_legend {
+				svg{
+					align-content: center;
+				}
+			}
+
+
+			.xaxis path_map,
+			.xaxis line {
+				stroke: #57595D;
+	            opacity: 0.25;
+
+			}
+
+			.xaxis text {
+				font-size: 12px;
+				color: #57595D;
+				font-family: arial;
+			}
+
+			#Map_tooltip {
+				position: absolute;
+				width: auto;
+				height: auto;
+				padding: 10px;
+				background-color: white;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+				-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+				pointer-events: none;
+				align-content: center;
+			}
+
+			#Map_tooltip.hidden {
+				display: none;
+			}
+			
+			#Map_tooltip p {
+				margin: 0;
+				font-family: arial;
+				font-size: 14px;
+				line-height: 20px;
+				text-align: left
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+		<div id="Map_tooltip" class="hidden" style="text-align:center;"	>
+			<p><strong><span id="Map_tooltipTitle"></span></strong></p>
+			<p><i><small><span id="Map_tooltipVotes"></span></small></i></p>
+			<p><span id="value"></span></p>
+		</div>
+
+		<div id="map_myBarChart"
+			 style="text-align:center;"> 
+		</div>
+
+		<div id="map_myChart"
+			 style="text-align:center;"> 
+		</div>
+
+		<script type="text/javascript"> src="ElectionMap.js" </script>
+	</body>
+</html>
